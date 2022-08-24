@@ -6,11 +6,13 @@ export const App = () => {
   const [data, setData] = useState([]);
 
   const getData = async () => {
-    const response = await axios.get("https://api.covid19api.com/summary/");
+    const response = await axios.get(
+      "https://covid19.ddc.moph.go.th/api/Cases/today-cases-by-provinces"
+    );
 
-    console.log(response.data.products);
+    console.log(response.data);
 
-    setData(response.data.products);
+    setData(response.data);
   };
 
   useEffect(() => {

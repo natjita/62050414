@@ -87,10 +87,10 @@ const Table = ({ products }) => {
           <tr>
             <th scope="col">#</th>
             <th scope="col"></th>
-            <th scope="col">Country</th>
+            <th scope="col">new_case</th>
             <th scope="col">Confirmed</th>
             <th scope="col" style={{ width: "200px" }}>
-             💔Deaths{" "}
+             💔{" "}
               <span role="button" className="" onClick={onSortClick}>
                 ⬆️
               </span>
@@ -115,10 +115,10 @@ const Table = ({ products }) => {
               <tr className="table-info">
                 <td>{index + 1}</td>
                
-                <td>{items.Country}</td>
-                <td>{items.Confirmed}</td>
-                <td>{items.Deaths}</td>
-                <td>{items.Recoveries}</td>
+                <td>{items.province}</td>
+                <td>{items.total_case}</td>
+                <td>{items.total_death}</td>
+                
               </tr>
             );
           })}
